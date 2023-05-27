@@ -5,58 +5,51 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'main.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:opencv_4/opencv_4.dart';
-import 'second.dart';
-import 'main.dart';
+import 'states.dart';
 
 
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
  
-   const Home({super.key});
+   Home({super.key, required this.texttext});
+   String texttext;
+   
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold (
-      // appBar: AppBar(
-      //   backgroundColor: Color.fromARGB(255, 47, 1, 70),
-      //   title: Text('Emotify'),
+      backgroundColor: Color.fromARGB(45, 60, 60, 60),
+    //   appBar: AppBar(
+    //     backgroundColor: Color.fromARGB(255, 47, 1, 70),
+    //     title: Text('Emotify'),
     // ),  
 
-         body: Padding(
-           padding: const EdgeInsets.all(20.0),
-           child: Center(
-             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                Image(image: AssetImage('assets/images/icon2.png'),
-                ),
-                SizedBox(height: 15,),
-                Text('Getting Things Ready For You!',
-                style: TextStyle(
-                  fontSize: 30,
-                  
-                ),),
-
-                 SizedBox(height: 20,),
-                  ElevatedButton(onPressed: (){
-                    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const Second()),
-  );
-                                   }, 
-                                   style: ElevatedButton.styleFrom(
-      backgroundColor: Color.fromARGB(255, 172, 237, 111),
-      foregroundColor: Colors.white,
-      shadowColor: Color.fromARGB(255, 78, 78, 78),
-      elevation: 5,
-    ),
-                 child: Text('Woohoo!'))
-               ],
-                    
+         body: Column(
+           children: [
+            Image(image: AssetImage('assets/images/icon2.png'),
+            ),
+            Text('Getting Things Ready For You',
+            style: TextStyle(
+              fontSize: 48,
+            ),),
+             Padding(
+               padding: const EdgeInsets.all(10.0),
              ),
-           ),
+             ElevatedButton(onPressed: (){
+              Second();
+             }, 
+             child: Text('Next'))
+
+           ],
          ),
+         
     );
   }
 }
