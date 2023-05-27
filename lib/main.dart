@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:camera/camera.dart';
+import 'package:opencv_4/opencv_4.dart';
+import 'Home.dart';
+
+late List<CameraDescription> cameras;
+
 
 void main() async {
-// WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
+  runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const Main(),
+
     );
   }
 }
