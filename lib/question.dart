@@ -27,36 +27,39 @@ class _QuestionState extends State<Question> {
                 SizedBox(height: 15,),
                 Text('How was your day?',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 20,
                   
                 ),),
-                 Padding(
-                   padding: const EdgeInsets.all(10.0),
-                 ),
+               
 
-                 SizedBox(height: 20,),
-                  ElevatedButton(onPressed: (){
-                    globals.happy ++;
-                    Navigator.push(
+                 SizedBox(height: 10,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(onPressed: (){
+                        globals.happy ++;
+                        Navigator.push(
     context,
     MaterialPageRoute(builder: (context) =>  Question2()),
   );
-                                   }, 
-                                   style: ElevatedButton.styleFrom(
+                                       }, 
+                                       style: ElevatedButton.styleFrom(
       backgroundColor: Color.fromARGB(255, 172, 237, 111),
       foregroundColor: Colors.white,
       shadowColor: Color.fromARGB(255, 78, 78, 78),
       elevation: 5,
     ),
        
-                 child: Text('Great')),
-                 SizedBox(height: 10,),
+                 child: Text('Great',
+                 style: TextStyle(
+                      color: Colors.black,
+                 ),
+                 )),
+                    
+                 SizedBox(width: 10,),
                  ElevatedButton(onPressed: (){
                   globals.sad++;
-                    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  Question2()),
-  );
+                    Navigator.of(context).push(_createRoute());
                                    }, 
                                    style: ElevatedButton.styleFrom(
       backgroundColor: Color.fromARGB(255, 172, 237, 111),
@@ -65,13 +68,27 @@ class _QuestionState extends State<Question> {
       elevation: 5,
     ),
        
-                 child: Text('Average')),
+                 child: Text('Average',
+                 style: TextStyle(
+                  color: Colors.black,
+                 ),)),
 
-               ],
+          ],
                     
              ),
+             ],
+                  ),
            ),
          ),
     );
   }
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) =>  Question2(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
 }

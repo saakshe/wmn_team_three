@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
-import 'package:opencv_4/opencv_4.dart';
-import 'Home.dart';
+import 'House.dart';
 
-late List<CameraDescription> cameras;
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  cameras = await availableCameras();
   runApp(MyApp());
 
 }

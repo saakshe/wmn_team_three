@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wmn_team_three/intermediate.dart';
+import 'package:wmn_team_three/switch.dart';
 import 'question.dart';
-import 'Home.dart';
+import 'House.dart';
 import 'main.dart';
 import 'second.dart';
 
@@ -22,7 +24,7 @@ class Thrid extends StatelessWidget {
                 ),
                 Text('The Vibe Is On Us!',
                 style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                       
                     ),),
                      
@@ -31,7 +33,7 @@ class Thrid extends StatelessWidget {
                       ElevatedButton(onPressed: (){
                         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) =>  Question()),
+            MaterialPageRoute(builder: (context) =>  SwitchIt()),
           );
                                        },
                                        style: ElevatedButton.styleFrom(
@@ -40,7 +42,10 @@ class Thrid extends StatelessWidget {
       shadowColor: Color.fromARGB(255, 78, 78, 78),
       elevation: 5,
     ),
-                 child: Text('Lesssgo'))
+                 child: Text('Lesssgo',
+                 style: TextStyle(
+                  color: Colors.black,
+                 ),),),
              ]
           ),
         ),

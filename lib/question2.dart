@@ -32,38 +32,38 @@ class _Question2State extends State<Question2> {
                 ),
                 SizedBox(height: 15,),
                 Text('Are ya winnin soon?',
-                style: TextStyle(
-                  fontSize: 30,
+                 style: TextStyle(
+                  fontSize: 20,
                   
-                ),),
-                 Padding(
-                   padding: const EdgeInsets.all(10.0),
-                 ),
+                ),
+                ),
 
                  SizedBox(height: 20,),
-                  ElevatedButton(onPressed: (){
-                    globals.happy ++;
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                      ElevatedButton(onPressed: (){
+                        globals.happy ++;
               
-                    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  Question3()),
-  );
-                                   }, 
-                                   style: ElevatedButton.styleFrom(
+                        Navigator.of(context).push(_createRoute());
+                                       }, 
+                                       style: ElevatedButton.styleFrom(
       backgroundColor: Color.fromARGB(255, 172, 237, 111),
       foregroundColor: Colors.white,
       shadowColor: Color.fromARGB(255, 78, 78, 78),
       elevation: 5,
     ),
        
-                 child: Text('Yay')),
-                 SizedBox(height: 10,),
+                 child: Text('Yay',
+                 style: TextStyle(
+                      color: Colors.black,
+                 ),)),
+                    
+                 SizedBox(width: 10,),
                  ElevatedButton(onPressed: (){
                globals.sad ++;
-                    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  Question3()),
-  );
+                    Navigator.of(context).push(_createRoute());
                                    }, 
                                    style: ElevatedButton.styleFrom(
       backgroundColor: Color.fromARGB(255, 172, 237, 111),
@@ -72,13 +72,28 @@ class _Question2State extends State<Question2> {
       elevation: 5,
     ),
        
-                 child: Text('Nay')),
+                 child: Text('Nay', 
+                 style: TextStyle(
+                  color: Colors.black,
+                 ),),),
 
                ],
                     
              ),
+             ],
+                  ),
            ),
          ),
     );
   }
+}
+
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) =>  Question3(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
 }

@@ -30,11 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  camera: ^0.10.5+2
-  tflite_flutter: ^0.10.0
-  opencv_4: ^1.0.0
-  image: ^4.0.17
   lottie: ^2.3.2
+  animated_text_kit: ^4.2.2
+ 
 
   
 

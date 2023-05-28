@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'question.dart';
-import 'Home.dart';
+import 'House.dart';
 import 'main.dart';
 import 'third.dart';
 
@@ -22,7 +22,7 @@ class Second extends StatelessWidget {
                 ),
                 Text('Music For Your Mood In Seconds',
                 style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                       
                     ),),
                     
@@ -40,7 +40,12 @@ class Second extends StatelessWidget {
       shadowColor: Color.fromARGB(255, 78, 78, 78),
       elevation: 5,
     ),
-                 child: Text('Next Next Next!'),),
+                 child: Text('Next Next Next!',
+                 style: TextStyle(
+                  color: Colors.black,
+                 ),
+                 ),
+                 ),
              ]
           ),
         ),
