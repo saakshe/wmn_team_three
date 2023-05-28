@@ -1,16 +1,3 @@
 # wmn_team_three
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Emotify makes use of the information on your current mood and makes a jukebox for you, hassle free after a stressful day. Listen to different jukeboxes everyday based on your mood and vibe of the day. Emotify crafts personalized jukeboxs to match your unique emotional journey.
