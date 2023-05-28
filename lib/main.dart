@@ -28,7 +28,7 @@ class Main extends StatelessWidget {
     
     // this will be used to manage the difference screens being displayed 
     return Scaffold(
-      body: Home(),
+      body: HomeScreen(),
     );
   }
 }
