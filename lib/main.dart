@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:wmn_team_three/video-happy.dart';
+import 'House.dart';
+import 'package:flutter/services.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'dart:developer';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+
 
 void main() async {
-// WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const Main(),
+
     );
   }
 }
