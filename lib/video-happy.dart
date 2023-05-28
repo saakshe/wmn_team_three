@@ -47,9 +47,10 @@ class _Happy extends State<Happy> {
       ),
       builder: (context, player) {
         return Scaffold(
-          appBar: AppBar(
-            title: const Text("Youtube Player"),
-          ) ,
+             appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 47, 1, 70),
+        title: Text('Emotify'),
+    ),  
           body: player,
         );
       },

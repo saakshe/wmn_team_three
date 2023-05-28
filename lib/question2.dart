@@ -31,7 +31,7 @@ class _Question2State extends State<Question2> {
                 Image(image: AssetImage('assets/images/icon2.png'),
                 ),
                 SizedBox(height: 15,),
-                Text('Are ya winnin soon?',
+                Text('Are ya winnin son?',
                  style: TextStyle(
                   fontSize: 20,
                   

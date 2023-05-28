@@ -5,6 +5,7 @@ import 'question.dart';
 import 'House.dart';
 import 'main.dart';
 import 'second.dart';
+import 'package:lottie/lottie.dart';
 
 
 class Thrid extends StatelessWidget {
@@ -20,8 +21,7 @@ class Thrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
              children: [
-             Image(image: AssetImage('assets/images/icon2.png'),
-                ),
+             Lottie.asset('assets/loader2.json'),
                 Text('The Vibe Is On Us!',
                 style: TextStyle(
                       fontSize: 20,
