@@ -1,18 +1,22 @@
 // basic loading page 
-//import 'dart:html';
+
 
 import 'dart:convert';
+import 'dart:js_util';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:wmn_team_three/models/channel_info.dart';
-import 'package:wmn_team_three/models/videos_List.dart';
+//import 'package:wmn_team_three/models/videos_List.dart';
 import 'package:wmn_team_three/utilities/Services.dart';
 
 import 'package:wmn_team_three/models/videos_list.dart';
+import 'package:wmn_team_three/models/videos_list.dart' as a;
 import 'package:wmn_team_three/video_player_screen.dart';
+
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -31,9 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
   late String _playListId;//added late modifier!!!!
   late String _nextPageToken;
   late List<VideoItem> videos;
-  // late String kind;
-  // late String etag;
-  // late PageInfo pageInfo;
+ late String kind;
+   late String etag;
+    late a.PageInfo pageInfo;
 
 
 
@@ -41,11 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState(){
     super.initState();
 
-
-   // _videosList = VideosList(kind: kind, etag: etag, nextPageToken: nextPageToken, videos: videos, pageInfo: pageInfo);
-   // _videosList.videos= List(kind: kind, etag: etag, id: id, video: video);
-    _videosList.videos = videos;
     _nextPageToken='';
+_videosList= VideosList(kind: kind, etag: etag, nextPageToken: _nextPageToken, videos: videos, pageInfo: pageInfo);
+   // _videosList.videos= List(kind: kind, etag: etag, id: id, video: video);
+
+    _videosList.videos = videos;
+
     //_loadVideos();
     _getChannelInfo();
   }
@@ -91,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListView.builder(
     itemCount: _videosList.videos.length,
     itemBuilder: (context, index) {
-    videos videoItem = _videosList.videos[index];
+    VideoItem videoItem = _videosList.videos[index];
     return InkWell(
     onTap: () async {
     Navigator.push(context,
