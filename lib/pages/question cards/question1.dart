@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
-import 'question2.dart';
-import 'main.dart';
-import 'my-globals.dart' as globals;
+import 'package:wmn_team_three/pages/question%20cards/question2.dart';
+import '../hello.dart';
+import '../my-globals.dart' as globals;
 
-class Question extends StatefulWidget {
-   Question({super.key,});
+
+
+class Question1 extends StatefulWidget {
+   Question1({super.key});
+
 
   @override
-  State<Question> createState() => _QuestionState();
+  State<Question1> createState() => _Question1State();
 }
 
-class _QuestionState extends State<Question> {
+class _Question1State extends State<Question1> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,19 +30,21 @@ class _QuestionState extends State<Question> {
                 Image(image: AssetImage('assets/images/icon2.png'),
                 ),
                 SizedBox(height: 15,),
-                Text('How was your day?',
+                Text('Long day, today?',
                 style: TextStyle(
                   fontSize: 20,
                   
                 ),),
-               
+              
 
                  SizedBox(height: 10,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    
                     children: [
                       ElevatedButton(onPressed: (){
                         globals.happy ++;
+
                         Navigator.push(
     context,
     MaterialPageRoute(builder: (context) =>  Question2()),
@@ -50,15 +57,14 @@ class _QuestionState extends State<Question> {
       elevation: 5,
     ),
        
-                 child: Text('Great',
+                 child: Text('Yeppsie',
                  style: TextStyle(
                       color: Colors.black,
-                 ),
-                 )),
+                 ),)),
                     
                  SizedBox(width: 10,),
                  ElevatedButton(onPressed: (){
-                  globals.sad++;
+                  globals.sad ++;
                     Navigator.of(context).push(_createRoute());
                                    }, 
                                    style: ElevatedButton.styleFrom(
@@ -68,12 +74,12 @@ class _QuestionState extends State<Question> {
       elevation: 5,
     ),
        
-                 child: Text('Average',
+                 child: Text('Nopesey',
                  style: TextStyle(
                   color: Colors.black,
                  ),)),
 
-          ],
+               ],
                     
              ),
              ],
@@ -83,6 +89,8 @@ class _QuestionState extends State<Question> {
     );
   }
 }
+
+
 
 Route _createRoute() {
   return PageRouteBuilder(

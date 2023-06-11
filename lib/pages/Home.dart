@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
-import 'second.dart';
+import 'package:wmn_team_three/pages/intermediate.dart';
+import 'package:wmn_team_three/pages/question%20cards/question1.dart';
+import 'package:wmn_team_three/pages/question%20cards/question2.dart';
+import 'package:wmn_team_three/pages/unused%20pages/third.dart';
+import 'package:lottie/lottie.dart';
+import 'unused pages/third.dart';
 
 
 
@@ -32,17 +36,26 @@ class _HomeState extends State<Home> {
                mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                children: [
-                Image(image: AssetImage('assets/images/icon2.png'),
-                ),
-                Text('Getting Things Ready For You',
+                // Image(image: AssetImage('assets/images/icon2.png'),
+                // ),
+                // Text('Getting Things Ready For You',
+                // style: TextStyle(
+                //   fontSize: 20,
+                // ),),
+
+                Lottie.asset('assets/loader2.json'),
+                Text('The Vibe Is On Us!',
                 style: TextStyle(
-                  fontSize: 20,
-                ),),
+                      fontSize: 20,
+                      
+                    ),),
+
+
                  SizedBox(height: 20,),
                  ElevatedButton(onPressed: (){
                   Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Second()),
+                MaterialPageRoute(builder: (context) =>  Question1()),
               );
                  }, 
                  style: ElevatedButton.styleFrom(
@@ -51,7 +64,7 @@ class _HomeState extends State<Home> {
                  shadowColor: Color.fromARGB(255, 78, 78, 78),
                  elevation: 5,
                ),
-                 child: Text('Lets goo',
+                 child: Text('Jump In!',
                  style: TextStyle(
                       color: Colors.black,
                      ),),

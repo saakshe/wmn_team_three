@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'question3.dart';
-import 'main.dart';
-import 'my-globals.dart' as globals;
+import 'package:wmn_team_three/pages/hello.dart';
+import 'package:wmn_team_three/pages/question%20cards/question3.dart';
+// import '../question3.dart';
+import '../../main.dart';
+import '../my-globals.dart' as globals;
 
 
 class Question2 extends StatefulWidget {

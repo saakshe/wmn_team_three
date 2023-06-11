@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'hello.dart';
-import 'my-globals.dart' as globals;
+import '../hello.dart';
+import '../my-globals.dart' as globals;
 
 
 

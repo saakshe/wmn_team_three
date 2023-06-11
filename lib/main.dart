@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wmn_team_three/video-happy.dart';
-import 'House.dart';
+import 'pages/youtube screens/video-happy.dart';
+import 'pages/Home.dart';
 import 'package:flutter/services.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'dart:developer';

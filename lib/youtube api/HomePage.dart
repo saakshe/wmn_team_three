@@ -1,9 +1,6 @@
 // basic loading page 
-
-
 import 'dart:convert';
 import 'dart:js_util';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,10 +8,9 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:wmn_team_three/models/channel_info.dart';
 //import 'package:wmn_team_three/models/videos_List.dart';
 import 'package:wmn_team_three/utilities/Services.dart';
-
 import 'package:wmn_team_three/models/videos_list.dart';
 import 'package:wmn_team_three/models/videos_list.dart' as a;
-import 'package:wmn_team_three/video_player_screen.dart';
+import 'package:wmn_team_three/pages/youtube%20screens/video_player_screen.dart';
 
 
 

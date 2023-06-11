@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wmn_team_three/video-happy.dart';
-import 'package:wmn_team_three/video-sad.dart';
-import 'question3.dart';
+import 'youtube screens/video-happy.dart';
+import 'youtube screens/video-sad.dart';
+// import '../question3.dart';
 import 'package:lottie/lottie.dart';
 import 'my-globals.dart' as globals;
 
