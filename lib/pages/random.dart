@@ -1,6 +1,6 @@
 import 'dart:math';
-import 'youtube screens/video-happy.dart';
-import 'youtube screens/video-sad.dart';
+import 'package:wmn_team_three/youtube api/ytSad.dart'; 
+import 'package:wmn_team_three/youtube api/ytHappy.dart'; 
 
 
 import 'my-globals.dart' as globals; 
